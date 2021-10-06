@@ -12,7 +12,7 @@ export default class Home extends Component {
           <title>Katie Thigpen | Professional Trombonist</title>
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="alternate" href="http://www.katiethigpen.com/" hreflang="x-default" />
+          <link rel="alternate" href="https://www.katiethigpen.com/" hreflang="x-default" />
           <meta name="description" content="Washington, DC area Performer &amp; Music Educator." />
           <meta name="keywords" content="katie,thigpen,trombone,music,teacher,lessons,washington" />
           {/* <link href="bower_components/bootstrap-sass/assets/stylesheets/main.css" rel="stylesheet" /> */}
