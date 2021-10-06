@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "sass": "sass --watch assets/stylesheets/main.scss assets/stylesheets/main.css",
     "dev": "next",
     "build": "next build",
     "start": "next start",
@@ -15,7 +16,8 @@
   "dependencies": {
     "next": "^11.1.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sass": "^1.42.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",

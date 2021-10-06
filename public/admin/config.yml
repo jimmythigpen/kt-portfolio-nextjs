@@ -1,22 +1,54 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main
 media_folder: public/img
 public_folder: img
+publish_mode: editorial_workflow
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "content"
+    label: "Site Content"
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
+    - name: "header"
+      label: "Header"
+      file: "content/header.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
+        - { label: "Sub Title", name: "subtitle", widget: "string"}
+        - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false }
+    - name: "sections"
+      label: "Sections"
+      file: "content/sections.md"
+      fields:
+        - name: 'sections'
           widget: list
           fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+          - { label: "Slug", name: "slug", widget: "string"}
+          - { label: "Title", name: "title", widget: "string"}
+          - { label: "Body", name: "body", widget: "text"}
+          - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false }
+    - name: "reads & links"
+      label: "Reads & Links"
+      file: "content/readsandlinks.md"
+      fields:
+        - name: 'reads'
+          widget: list
+          fields:
+            - { label: "Title", name: "title", widget: "string"}
+            - { label: "URL", name: "url", widget: "string"}
+        - name: 'links'
+          widget: list
+          fields:
+            - { label: "Title", name: "title", widget: "string"}
+            - { label: "URL", name: "url", widget: "string"}
+    - name: "contact"
+      label: "Contact"
+      file: "content/contact.md"
+      fields:
+        - { label: "Body", name: "body", widget: "markdown", buttons: ["link"]}
+    - name: "footer"
+      label: "Footer"
+      file: "content/footer.md"
+      fields:
+        - { label: "Body", name: "body", widget: "text"}
+
+
