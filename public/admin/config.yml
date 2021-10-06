@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: main # Branch to update (optional; defaults to master)
 media_folder: public/img
 public_folder: img
@@ -23,7 +23,7 @@ collections:
           widget: list
           fields:
           - { label: "Title", name: "title", widget: "string"}
-          - { label: "Body", name: "Body", widget: "text"}
+          - { label: "Body", name: "body", widget: "text"}
           - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false }
     - name: "linksleft"
       label: "Links Left"
