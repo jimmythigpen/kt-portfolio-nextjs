@@ -1,10 +1,11 @@
 import Head from "next/head"
 import { Component } from 'react'
-// import { attributes, react as HomeContent } from '../content/home.md';
+import { attributes as headerData } from '../content/header.md';
 
 export default class Home extends Component {
   render() {
-    // let { title, cats } = attributes;
+    const { image, title, subtitle } = headerData;
+
     return (
       <>
         <Head>
@@ -18,19 +19,6 @@ export default class Home extends Component {
           {/* <link href="bower_components/bootstrap-sass/assets/stylesheets/main.css" rel="stylesheet" /> */}
           <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet" type="text/css"></link>
         </Head>
-        {/* <article> */}
-          {/* <h1>{title}</h1> */}
-          {/* <HomeContent /> */}
-          {/* <ul>
-            {cats.map((cat, k) => (
-              <li key={k}>
-                <h2>{cat.name}</h2>
-                <p>{cat.description}</p>
-              </li>
-            ))}
-          </ul> */}
-        {/* </article> */}
-
         <nav className="navbar navbar-default navbar-fixed-top topnav" role="navigation">
           <div className="container topnav">
             <div className="navbar-header">
@@ -63,13 +51,13 @@ export default class Home extends Component {
             </div>
           </div>
         </nav>
-        <div className="intro-header">
+        <div className="intro-header" style={{ background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${image}) no-repeat center center`, backgroundSize: 'cover' }}>
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
                 <div className="intro-message">
-                  <h1>Katie Thigpen</h1>
-                  <h3>Musician, Artist, Teacher</h3>
+                  <h1>{title}</h1>
+                  <h3>{subtitle}</h3>
                 </div>
               </div>
             </div>
