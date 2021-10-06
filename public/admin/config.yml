@@ -4,19 +4,80 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "content"
+    label: "Content"
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
+    - label: "Header"
+      name: "header"
+      file: "content/header.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
-          widget: list
-          fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+        - { label: "Sub Title", name: "subtitle", widget: "string"}
+    - label: "Section"
+      name: "section"
+      file: "content/section.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Body", name: "body", widget: "string"}
+    - label: "Footer"
+      name: "footer"
+      file: "content/footer.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Body", name: "body", widget: "string"}
+
+
+# collections:
+#   - name: "pages"
+#     label: "Pages"
+#     files:
+#     - label: "Home"
+#       name: "home"
+#       file: "content/home.md"
+#       fields:
+#         - { label: "Title", name: "title", widget: "string"}
+#         - { label: "Publish Date", name: "date", widget: "datetime" }
+#         - { label: "Body", name: "body", widget: "markdown"}
+#         - label: 'Cats'
+#           name: "cats"
+#           widget: list
+#           fields:
+#             - { label: "Name", name: "name", widget: "string"}
+#             - { label: "Description", name: "description", widget: "text"}
+
+
+# collections:
+#   - name: "Portfolio Content"
+#     files:
+#       - name: "Header"
+#         file: "site/content/header.md"
+#         fields:
+#           - {label: Title, name: title, widget: string}
+#           - {label: Intro, name: intro, widget: markdown}
+#           - label: Team
+#             name: team
+#             widget: list
+#             fields:
+#               - {label: Name, name: name, widget: string}
+#               - {label: Position, name: position, widget: string}
+#               - {label: Photo, name: photo, widget: image}
+#       - name: "Section"
+#         folder: "_posts/blog"
+#         create: true
+#         identifier_field: name
+#         fields:
+#           - {label: "Name", name: "name", widget: "string"}
+#           - {label: "Publish Date", name: "date", widget: "datetime"}
+#           - {label: "Featured Image", name: "thumbnail", widget: "image"}
+#           - {label: "Body", name: "body", widget: "markdown"}
+#       - name: Footer"
+#         file: "site/content/f.yml"
+#         fields:
+#           - {label: Title, name: title, widget: string}
+#           - {label: Intro, name: intro, widget: markdown}
+#           - label: Locations
+#             name: locations
+#             widget: list
+#             fields:
+#               - {label: Name, name: name, widget: string}
+#               - {label: Address, name: address, widget: string}
