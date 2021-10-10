@@ -28,11 +28,12 @@ collections:
           - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false }
     - label: "Read & Links"
       name: "readsandlinks"
-      widget: list
+      # widget: list
       file: "content/readsandlinks.md"
       fields:
         - label: 'Reads'
           name: "reads"
+          widget: list
           fields:
           - label: "Read"
             name: "read"
@@ -42,6 +43,7 @@ collections:
               - { label: "URL", name: "url", widget: "string"}
         - label: 'Links'
           name: "links"
+          widget: list
           fields:
           - label: "Link"
             name: "link"
