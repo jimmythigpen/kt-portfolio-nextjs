@@ -33,7 +33,6 @@ collections:
       fields:
         - label: 'Reads'
           name: "reads"
-          widget: list
           fields:
           - label: "Read"
             name: "read"
@@ -43,7 +42,6 @@ collections:
               - { label: "URL", name: "url", widget: "string"}
         - label: 'Links'
           name: "links"
-          widget: list
           fields:
           - label: "Link"
             name: "link"
