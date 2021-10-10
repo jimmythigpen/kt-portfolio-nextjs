@@ -19,7 +19,7 @@ collections:
       name: "sections"
       file: "content/section.md"
       fields:
-        - label: 'Sections'
+        - name: 'sections'
           widget: list
           fields:
           - { label: "Title", name: "title", widget: "string"}
