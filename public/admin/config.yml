@@ -6,6 +6,7 @@ media_folder: public/img
 public_folder: img
 collections:
   - name: "content"
+    label: "Content"
     files:
     - name: "header"
       label: "Header"
