@@ -28,29 +28,20 @@ collections:
           - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false }
     - label: "Read & Links"
       name: "readsandlinks"
-      # widget: list
       file: "content/readsandlinks.md"
       fields:
         - label: 'Reads'
           name: "reads"
           widget: list
           fields:
-          - label: "Read"
-            name: "read"
-            widget: list
-            fields:
-              - { label: "Title", name: "title", widget: "string"}
-              - { label: "URL", name: "url", widget: "string"}
+            - { label: "Title", name: "title", widget: "string"}
+            - { label: "URL", name: "url", widget: "string"}
         - label: 'Links'
           name: "links"
           widget: list
           fields:
-          - label: "Link"
-            name: "link"
-            widget: list
-            fields:
-              - { label: "Title", name: "title", widget: "string"}
-              - { label: "URL", name: "url", widget: "string"}
+            - { label: "Title", name: "title", widget: "string"}
+            - { label: "URL", name: "url", widget: "string"}
     # - name: "linksleft"
     #   label: "Links Left"
     #   file: "content/linksleft.md"
