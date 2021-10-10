@@ -26,13 +26,13 @@ collections:
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Body", name: "body", widget: "text"}
           - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false }
-    - label: "Read and Links"
+    - label: "Read & Links"
       name: "readsandlinks"
       widget: list
       file: "content/readsandlinks.md"
       fields:
-        - label: 'Read'
-          name: "read"
+        - label: 'Reads'
+          name: "reads"
           widget: list
           fields:
           - label: "Read"
@@ -41,8 +41,8 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string"}
               - { label: "URL", name: "url", widget: "string"}
-        - label: 'Link'
-          name: "link"
+        - label: 'Links'
+          name: "links"
           widget: list
           fields:
           - label: "Link"
