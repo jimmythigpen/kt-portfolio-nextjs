@@ -6,17 +6,14 @@ media_folder: public/img
 public_folder: img
 collections:
   - name: "content"
-    label: "Content"
     files:
-    - label: "Header"
-      name: "header"
+    - name: "header"
       file: "content/header.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Sub Title", name: "subtitle", widget: "string"}
         - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false }
-    - label: "Sections"
-      name: "sections"
+    - name: "sections"
       file: "content/section.md"
       fields:
         - name: 'sections'
@@ -25,24 +22,20 @@ collections:
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Body", name: "body", widget: "text"}
           - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false }
-    - label: "Reads & Links"
-      name: "readsandlinks"
+    - name: "reads & links"
       file: "content/readsandlinks.md"
       fields:
-        - label: 'Reads'
-          name: "reads"
+        - name: 'reads'
           widget: list
           fields:
             - { label: "Title", name: "title", widget: "string"}
             - { label: "URL", name: "url", widget: "string"}
-        - label: 'Links'
-          name: "links"
+        - name: 'links'
           widget: list
           fields:
             - { label: "Title", name: "title", widget: "string"}
             - { label: "URL", name: "url", widget: "string"}
-    - label: "Footer"
-      name: "footer"
+    - name: "footer"
       file: "content/footer.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
