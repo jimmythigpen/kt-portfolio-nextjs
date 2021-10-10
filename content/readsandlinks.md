@@ -38,4 +38,16 @@ section:
       Lake Fine Arts Camp Staff Band in 2009 and 2010 Dr. Thigpen performed Paul
       Creston's Fantasy for Trombone and William Goldstein's Colloquy. In 2013
       she won the Eastern Trombone Workshop National Solo Competition.
+reads:
+  - read:
+      - title: Is This the Right Time to Study Music?
+        url: http://www.huffingtonpost.com/alan-fletcher/is-this-the-right-time-to_1_b_8576686.html
+      - title: http://www.tobyoft.com/featured-a-tale-of-two-auditions/
+        url: A Tale of Two Auditions
+links:
+  - link:
+      - title: University of South Carolina School of Music
+        url: http://www.sc.edu/study/colleges_schools/music/
+      - title: University of Cincinnati, College-Conservatory of Music
+        url: http://ccm.uc.edu/
 ---
