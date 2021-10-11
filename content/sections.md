@@ -1,5 +1,5 @@
 ---
-section:
+sections:
   - title: About
     image: img/about.jpg
     body: Katie Thigpen, native of Charleston, SC, is a freelance trombonist and
