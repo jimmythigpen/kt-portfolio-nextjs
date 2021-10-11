@@ -13,6 +13,7 @@ sections:
       School and retired principal trombonist of the Metropolitan Opera
       Orchestra, and Craig Mulcahy, principal trombonist of the National
       Symphony Orchestra and faculty at the University of Maryland.
+    slug: about
   - title: Teaching
     image: img/teaching.jpg
     body: As an educator Dr. Thigpen maintains a studio of private students in the
@@ -23,6 +24,7 @@ sections:
       Before joining the faculty at Blue Lake she was the director of their
       middle school camp, Camp Bernstein, and also worked as a camp counselor.
       Next summer will be her tenth at Blue Lake.
+    slug: teaching
   - title: Performing
     image: img/performing.jpg
     body: Dr. Thigpen performs regularly with various chamber groups and orchestras
@@ -38,4 +40,5 @@ sections:
       Lake Fine Arts Camp Staff Band in 2009 and 2010 Dr. Thigpen performed Paul
       Creston's Fantasy for Trombone and William Goldstein's Colloquy. In 2013
       she won the Eastern Trombone Workshop National Solo Competition.
+    slug: performing
 ---
