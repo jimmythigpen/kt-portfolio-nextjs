@@ -3,10 +3,8 @@ import { Component, Fragment } from 'react';
 import { attributes as headerData } from '../content/header.md';
 import { attributes as sectionData } from '../content/sections.md';
 import { attributes as readsandlinksData } from '../content/readsandlinks.md';
-import { attributes as contactData, react as ContactContent } from '../content/contact.md';
-import { attributes as footerData, react as FooterContent } from '../content/footer.md';
-
-console.log('contactData:', contactData);
+import { react as ContactContent } from '../content/contact.md';
+import { react as FooterContent } from '../content/footer.md';
 
 export default class Home extends Component {
   componentDidMount() {    
@@ -159,7 +157,7 @@ export default class Home extends Component {
                 <hr className="section-heading-spacer" />
                 <div className="clearfix" />
                 <h2 className="section-heading">Contact</h2>
-                <p className="lead">{contactData.body}</p>
+                <p className="lead"><ContactContent /></p>
                 <p className="lead">
                   <a target="_blank" href="https://www.facebook.com/katiethigpen"><i className="icon-facebook-squared" /></a>
                   <a target="_blank" href="https://www.linkedin.com/pub/katie-thigpen/81/159/1ba"><i className="icon-linkedin-squared" /></a>
@@ -174,7 +172,7 @@ export default class Home extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <p className="copyright text-muted small">{footerData.body}</p>
+                <p className="copyright text-muted small"><FooterContent /></p>
               </div>
             </div>
           </div>
