@@ -44,7 +44,6 @@ collections:
       label: "Contact"
       file: "content/contact.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
         - { label: "Body", name: "body", widget: "string"}
     - name: "footer"
       label: "Footer"
