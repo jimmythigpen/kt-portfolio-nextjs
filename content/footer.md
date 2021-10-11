@@ -1,1 +1,1 @@
-
+Copyright © Katie Thigpen 2017. All Rights Reserved
