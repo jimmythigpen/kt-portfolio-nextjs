@@ -6,6 +6,9 @@ import { attributes as readsandlinksData } from '../content/readsandlinks.md';
 import { attributes as contactData, react as ContactContent } from '../content/contact.md';
 import { attributes as footerData, react as FooterContent } from '../content/footer.md';
 
+console.log('contactData:', contactData);
+console.log('footerData:', footerData);
+
 export default class Home extends Component {
   componentDidMount() {    
     let location = new google.maps.LatLng(38.8435508,-77.0922251);
