@@ -1,1 +1,3 @@
-Copyright © Katie Thigpen 2017. All Rights Reserved
+---
+body: Copyright © Katie Thigpen 2017. All Rights Reserved
+---

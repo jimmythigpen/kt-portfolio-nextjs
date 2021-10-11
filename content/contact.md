@@ -1,1 +1,3 @@
-For information regarding private lessons, performances, or other engagements please feel free to reach me at thigpen.katie@gmail.com
+---
+body: For information regarding private lessons, performances, or other engagements please feel free to reach me at thigpen.katie@gmail.com
+---
