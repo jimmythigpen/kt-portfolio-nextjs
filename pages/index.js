@@ -7,7 +7,6 @@ import { attributes as contactData, react as ContactContent } from '../content/c
 import { attributes as footerData, react as FooterContent } from '../content/footer.md';
 
 console.log('contactData:', contactData);
-console.log('footerData:', footerData);
 
 export default class Home extends Component {
   componentDidMount() {    
@@ -160,7 +159,7 @@ export default class Home extends Component {
                 <hr className="section-heading-spacer" />
                 <div className="clearfix" />
                 <h2 className="section-heading">Contact</h2>
-                <p className="lead">For information regarding private lessons, performances, or other engagements please feel free to reach me at <a href="mailto:thigpen.katie@gmail.com">thigpen.katie@gmail.com</a></p>
+                <p className="lead">{contactData.body}</p>
                 <p className="lead">
                   <a target="_blank" href="https://www.facebook.com/katiethigpen"><i className="icon-facebook-squared" /></a>
                   <a target="_blank" href="https://www.linkedin.com/pub/katie-thigpen/81/159/1ba"><i className="icon-linkedin-squared" /></a>
@@ -175,7 +174,7 @@ export default class Home extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <p className="copyright text-muted small">Copyright © Katie Thigpen 2017. All Rights Reserved</p>
+                <p className="copyright text-muted small">{footerData.body}</p>
               </div>
             </div>
           </div>
