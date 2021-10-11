@@ -98,7 +98,7 @@ export default class Home extends Component {
                 {
                   readsandlinksData.reads.map((read, i) => (
                     <dd key={i}>
-                      <a href={read.url}>{read.title}</a>
+                      <a target="_blank" href={read.url}>{read.title}</a>
                     </dd>
                   ))
                 }
@@ -112,7 +112,7 @@ export default class Home extends Component {
                 {
                   readsandlinksData.links.map((link, i) => (
                     <dd key={i}>
-                      <a href={link.url}>{link.title}</a>
+                      <a target="_blank" href={link.url}>{link.title}</a>
                     </dd>
                   ))
                 }
