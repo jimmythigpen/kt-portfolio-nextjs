@@ -7198,6 +7198,10 @@ html {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 h1,
 h2,
@@ -7358,12 +7362,12 @@ p.copyright {
   margin-left: 0;
 }
 
-.elevator-button {
-  cursor: pointer;
-}
-
 .read-desc {
   padding-bottom: 5px;
+}
+
+.topnav.title {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

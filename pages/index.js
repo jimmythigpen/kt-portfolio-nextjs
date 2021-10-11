@@ -1,5 +1,5 @@
-import Head from "next/head"
-import { Component } from 'react'
+import Head from "next/head";
+import { Component, Fragment } from 'react';
 import { attributes as headerData } from '../content/header.md';
 import { attributes as sectionData } from '../content/sections.md';
 import { attributes as readsandlinksData } from '../content/readsandlinks.md';
@@ -7,6 +7,33 @@ import { attributes as contactData, react as ContactContent } from '../content/c
 import { attributes as footerData, react as FooterContent } from '../content/footer.md';
 
 export default class Home extends Component {
+  componentDidMount() {    
+    let location = new google.maps.LatLng(38.8435508,-77.0922251);
+    let mapOptions = {
+      center: location,
+      zoom: 10,
+      draggable: false,
+      scrollwheel: false,
+      panControl: false,
+      mapTypeControl: false,
+      streetViewControl: false,
+      disableDefaultUI: true
+    };
+    let googleMap = new google.maps.Map(document.getElementById("map-container"), mapOptions);
+    let marker = new google.maps.Marker({
+      position: location,
+      map: googleMap,
+      title:"College Park, MD"
+    });
+
+    marker.setMap(googleMap);
+  }
+
+  scrollTop = () => {
+    window.scrollTo(0,0);
+    history.pushState(null, null, ' ');
+  }
+
   render() {
     const { image, title, subtitle } = headerData;
 
@@ -14,6 +41,7 @@ export default class Home extends Component {
       <>
         <Head>
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+          <script src="https://maps.google.com/maps/api/js?key=AIzaSyBjCrItrF-id9sR26B8YTdLiZAiIypku1Y"></script>
           <title>Katie Thigpen | Professional Trombonist</title>
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,7 +59,7 @@ export default class Home extends Component {
                 <span className="icon-bar" />
                 <span className="icon-bar" />
               </button>
-              <div className="navbar-brand topnav elevator-button">Katie Thigpen</div>
+              <div className="navbar-brand topnav title" onClick={this.scrollTop}>Katie Thigpen</div>
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav navbar-right">
@@ -66,9 +94,9 @@ export default class Home extends Component {
         </div>
         {
           sectionData.sections.map((section, i) => (
-            <>
+            <Fragment key={i}>
               <a name={section.slug} />
-              <div key={i} className={`content-section-${i % 2 ? 'a' : 'b'}`}>
+              <div className={`content-section-${i % 2 ? 'a' : 'b'}`}>
                 <div className="container">
                   <div className="row">
                     <div className={`col-lg-6 col-sm-6 ${i % 2 ? '' : 'col-sm-push-6'}`}>
@@ -83,7 +111,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </div>
-            </>
+            </Fragment>
           ))
         }
         <a name="links" />
