@@ -2,13 +2,14 @@ import Head from "next/head"
 import { Component } from 'react'
 import { attributes as headerData } from '../content/header.md';
 import { attributes as sectionData } from '../content/section.md';
+import { attributes as readsandlinksData } from '../content/readsandlinks.md';
 
 export default class Home extends Component {
   render() {
     const { image, title, subtitle } = headerData;
-    const { sections } = sectionData;
 
     console.log('sectionData:', sectionData);
+    console.log('readsandlinksData:', readsandlinksData);
 
     return (
       <>
