@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  # test
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main
 media_folder: public/img
 public_folder: img
+publish_mode: editorial_workflow
 collections:
   - name: "content"
     label: "Site Content"
