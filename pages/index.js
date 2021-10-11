@@ -72,16 +72,16 @@ export default class Home extends Component {
           sectionData.sections.map((section, index) => {
             console.log('section:', section);
             return (
-              <div key={index} className={`content-section-${index % 2 ? 'b' : 'a'}`}>
+              <div key={index} className={`content-section-${index % 2 ? 'a' : 'b'}`}>
                 <div className="container">
                   <div className="row">
-                    <div className={`col-lg-6 col-sm-6 ${index % 2 ? 'col-sm-push-6' : ''}`}>
+                    <div className={`col-lg-6 col-sm-6 ${index % 2 ? '' : 'col-sm-push-6'}`}>
                       <hr className="section-heading-spacer" />
                       <div className="clearfix"></div>
                       <h2 className="section-heading">{section.title}</h2>
                       <p className="lead">{section.body}</p>
                     </div>
-                    <div className={`col-lg-6 col-sm-6 ${index % 2 ? 'col-sm-pull-6' : ''}`}>
+                    <div className={`col-lg-6 col-sm-6 ${index % 2 ? '' : 'col-sm-pull-6'}`}>
                       <img className="img-responsive" src={section.image} alt={section.title} />
                     </div>
                   </div>
