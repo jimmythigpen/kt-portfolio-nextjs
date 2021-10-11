@@ -37,15 +37,13 @@ export default class Home extends Component {
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav navbar-right">
-                <li>
-                  <a href="#about">About</a>
-                </li>
-                <li>
-                  <a href="#teaching">Teaching</a>
-                </li>
-                <li>
-                  <a href="#performing">Performing</a>
-                </li>
+                {
+                  sectionData.sections.map((section, i) => (
+                    <li key={i}>
+                      <a href={`#${section.slug}`}>{section.title}</a>
+                    </li>
+                  ))
+                }
                 <li>
                   <a href="#links">Reads &amp; Links</a>
                 </li>
@@ -69,19 +67,19 @@ export default class Home extends Component {
           </div>
         </div>
         {
-          sectionData.sections.map((section, index) => (
+          sectionData.sections.map((section, i) => (
             <>
               <a name={section.slug} />
-              <div key={index} className={`content-section-${index % 2 ? 'a' : 'b'}`}>
+              <div key={i} className={`content-section-${i % 2 ? 'a' : 'b'}`}>
                 <div className="container">
                   <div className="row">
-                    <div className={`col-lg-6 col-sm-6 ${index % 2 ? '' : 'col-sm-push-6'}`}>
+                    <div className={`col-lg-6 col-sm-6 ${i % 2 ? '' : 'col-sm-push-6'}`}>
                       <hr className="section-heading-spacer" />
                       <div className="clearfix"></div>
                       <h2 className="section-heading">{section.title}</h2>
                       <p className="lead">{section.body}</p>
                     </div>
-                    <div className={`col-lg-6 col-sm-6 ${index % 2 ? '' : 'col-sm-pull-6'}`}>
+                    <div className={`col-lg-6 col-sm-6 ${i % 2 ? '' : 'col-sm-pull-6'}`}>
                       <img className="img-responsive" src={section.image} alt={section.title} />
                     </div>
                   </div>
