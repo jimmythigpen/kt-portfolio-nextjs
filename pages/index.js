@@ -108,6 +108,7 @@ export default class Home extends Component {
                 <hr className="section-heading-spacer" />
                 <div className="clearfix" />
                 <h2 className="section-heading">Useful Links</h2>
+                <dl className="dl-horizontal links">
                 {
                   readsandlinksData.links.map((link, i) => (
                     <dd key={i}>
@@ -115,6 +116,7 @@ export default class Home extends Component {
                     </dd>
                   ))
                 }
+                </dl>
               </div>
             </div>
           </div>
