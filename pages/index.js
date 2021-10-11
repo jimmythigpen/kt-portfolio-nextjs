@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { Component } from 'react'
 import { attributes as headerData } from '../content/header.md';
-import { attributes as sectionData } from '../content/section.md';
+import { attributes as sectionData } from '../content/sections.md';
 import { attributes as readsandlinksData } from '../content/readsandlinks.md';
 
 export default class Home extends Component {
@@ -68,7 +68,65 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <a name="about" />
+        {
+          sectionData.sections.map((section, index) => {
+            console.log('section:', section);
+            return (
+              <div key={index} className={`content-section-${index % 2 ? 'b' : 'a'}`}>
+                <div className="container">
+                  <div className="row">
+                    <div className={`col-lg-6 col-sm-6 ${index % 2 ? 'col-sm-push-6' : ''}`}>
+                      <hr className="section-heading-spacer" />
+                      <div className="clearfix"></div>
+                      <h2 className="section-heading">{section.title}</h2>
+                      <p className="lead">{section.body}</p>
+                    </div>
+                    <div className={`col-lg-6 col-sm-6 ${index % 2 ? 'col-sm-pull-6' : ''}`}>
+                      <img className="img-responsive" src={section.image} alt={section.title} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          })
+        }
+
+        {/* <div className="col-lg-6 col-sm-push-6  col-sm-6"> */}
+
+        {/* <a name="about" />
+        <div className="content-section-b">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 col-sm-push-6  col-sm-6">
+                <hr className="section-heading-spacer" />
+                <div className="clearfix" />
+                <h2 className="section-heading">About</h2>
+                <p className="lead">Katie Thigpen, native of Charleston, SC, is a freelance trombonist and educator in the Washington, DC area. She received her Doctor of Musical Arts and Master of Music degrees from the University of Cincinnati, College-Conservatory of Music where she studied with Tim Anderson. She earned her Bachelor of Music degree in music education from the University of South Carolina where she studied with Brad Edwards and received the Robert Van Doren Award for Most Outstanding Senior in music education. Most recently she has studied with Per Brevig, faculty at The Juilliard School and retired principal trombonist of the Metropolitan Opera Orchestra, and Craig Mulcahy, principal trombonist of the National Symphony Orchestra and faculty at the University of Maryland.</p>
+              </div>
+              <div className="col-lg-6 col-sm-pull-6  col-sm-6">
+                <img className="img-responsive" src="bower_components/bootstrap-sass/assets/img/about.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <a name="teaching" />
+        <div className="content-section-a">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 col-sm-6">
+                <hr className="section-heading-spacer" />
+                <div className="clearfix" />
+                <h2 className="section-heading">Teaching</h2>
+                <p className="lead">As an educator Dr. Thigpen maintains a studio of private students in the metropolitan DC area. She teaches low brass students at DeMatha Catholic High School, Holy Trinity Episcopal Day School, International School of Music, and with the DC Youth Orchestra Program. During the summer Dr. Thigpen is on faculty at Blue Lake Fine Arts Camp in Twin Lake, Michigan. Before joining the faculty at Blue Lake she was the director of their middle school camp, Camp Bernstein, and also worked as a camp counselor. Next summer will be her tenth at Blue Lake.</p>
+              </div>
+              <div className="col-lg-6 col-sm-6">
+                <img className="img-responsive" src="bower_components/bootstrap-sass/assets/img/teaching.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div> */}
+
+        {/* <a name="about" />
         <div className="content-section-b">
           <div className="container">
             <div className="row">
@@ -115,7 +173,7 @@ export default class Home extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <a name="links" />
         <div className="content-section-a">
           <div className="container">

@@ -22,6 +22,7 @@ collections:
         - name: 'sections'
           widget: list
           fields:
+          - { label: "Slug", name: "slug", widget: "string"}
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Body", name: "body", widget: "text"}
           - { label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false }
