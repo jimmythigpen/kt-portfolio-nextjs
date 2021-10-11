@@ -3,13 +3,12 @@ import { Component } from 'react'
 import { attributes as headerData } from '../content/header.md';
 import { attributes as sectionData } from '../content/sections.md';
 import { attributes as readsandlinksData } from '../content/readsandlinks.md';
+import { attributes as contactData, react as ContactContent } from '../content/contact.md';
+import { attributes as footerData, react as FooterContent } from '../content/footer.md';
 
 export default class Home extends Component {
   render() {
     const { image, title, subtitle } = headerData;
-
-    console.log('sectionData:', sectionData);
-    console.log('readsandlinksData:', readsandlinksData);
 
     return (
       <>
@@ -21,7 +20,6 @@ export default class Home extends Component {
           <link rel="alternate" href="https://www.katiethigpen.com/" hreflang="x-default" />
           <meta name="description" content="Washington, DC area Performer &amp; Music Educator." />
           <meta name="keywords" content="katie,thigpen,trombone,music,teacher,lessons,washington" />
-          {/* <link href="bower_components/bootstrap-sass/assets/stylesheets/main.css" rel="stylesheet" /> */}
           <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet" type="text/css"></link>
         </Head>
         <nav className="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -97,34 +95,26 @@ export default class Home extends Component {
                 <div className="clearfix" />
                 <h2 className="section-heading">Interesting reads</h2>
                 <dl className="dl-horizontal links">
-                  <dd><a href="http://www.huffingtonpost.com/alan-fletcher/is-this-the-right-time-to_1_b_8576686.html">Is This the Right Time to Study Music?</a></dd>
-                  <dd><a href="http://www.tobyoft.com/featured-a-tale-of-two-auditions/">A Tale of Two Auditions</a></dd>
-                  <dd><a href="http://arbanmethod.com/wyntons-twelve-ways-to-practice/">Wynton's Twelve Ways to Practice</a></dd>
-                  <dd><a href="http://www.tobyoft.com/adam-rainey-audition-sucess">Adam Rainey Audition Success</a></dd>
-                  <dd><a href="http://williamjamespercussion.com/2015/03/22/12-thoughts-from-the-other-side-of-the-screen/">12 Thoughts from the Other Side of the Screen</a></dd>
-                  <dd><a href="http://www.andrewhitz.com/blog/2012/09/11/practicing-summed-up-in-6-sentences-by-doug-yeo">Practicing Summed Up in 6 Sentences by Doug Yeo</a></dd>
-                  <dd><a href="http://www.juilliard.edu/journal/1509/practicehacks">3 Practice Hacks Boost Learning</a></dd>
+                {
+                  readsandlinksData.reads.map((read, i) => (
+                    <dd key={i}>
+                      <a href={read.url}>{read.title}</a>
+                    </dd>
+                  ))
+                }
                 </dl>
               </div>
               <div className="col-lg-6 col-sm-6">
                 <hr className="section-heading-spacer" />
                 <div className="clearfix" />
                 <h2 className="section-heading">Useful Links</h2>
-                <dl className="dl-horizontal links">
-                  <dd><a href="http://www.sc.edu/study/colleges_schools/music/">University of South Carolina School of Music</a></dd>
-                  <dd><a href="http://ccm.uc.edu/">University of Cincinnati, College-Conservatory of Music</a></dd>
-                  <dd><a href="http://www.bluelake.org/">Blue Lake Fine Arts Camp</a></dd>
-                  <dd><a href="http://www.aspenmusicfestival.com/">Aspen Music Festival &amp; School</a></dd>
-                  <dd><a href="http://www.trombone.net/">International Trombone Association</a></dd>
-                  <dd><a href="http://www.sai-national.org/home/">Sigma Alpha Iota</a></dd>
-                  <dd><a href="http://myiwbc.org/">International Women’s Brass Conference</a></dd>
-                  <dd><a href="http://www.lastrowmusic.com/">Last Row Music</a></dd>
-                  <dd><a href="https://www.musicalchairs.info/">Musical Chairs</a></dd>
-                  <dd><a href="http://www.bulletproofmusician.com/">Bullet Proof Musician</a></dd>
-                  <dd><a href="http://tromboneforum.org/">The Trombone Forum</a></dd>
-                  <dd><a href="http://trombone.org/">Online Trombone Journal</a></dd>
-                  <dd><a href="http://tromboneexcerpts.org/">Trombone Excerpts</a></dd>
-                </dl>
+                {
+                  readsandlinksData.links.map((link, i) => (
+                    <dd key={i}>
+                      <a href={link.url}>{link.title}</a>
+                    </dd>
+                  ))
+                }
               </div>
             </div>
           </div>
