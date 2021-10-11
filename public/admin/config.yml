@@ -7,6 +7,7 @@ public_folder: img
 collections:
   - name: "content"
     label: "Site Content"
+    preview_path: "/"
     files:
     - name: "header"
       label: "Header"
