@@ -54,9 +54,9 @@ export default class Home extends Component {
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
           <script src="https://maps.google.com/maps/api/js?key=AIzaSyBjCrItrF-id9sR26B8YTdLiZAiIypku1Y"></script>
           <title>Katie Thigpen | Professional Trombonist</title>
-          <meta charset="UTF-8" />
+          <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="alternate" href="https://www.katiethigpen.com/" hreflang="x-default" />
+          <link rel="alternate" href="https://www.katiethigpen.com/" hrefLang="x-default" />
           <meta name="description" content="Washington, DC area Performer &amp; Music Educator." />
           <meta name="keywords" content="katie,thigpen,trombone,music,teacher,lessons,washington" />
           <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet" type="text/css"></link>
