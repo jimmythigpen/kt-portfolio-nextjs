@@ -1,1 +1,1 @@
-Copyright © Katie Thigpen 2022. All Rights Reserved
+Copyright © Katie Thigpen 2025. All Rights Reserved

@@ -12,8 +12,6 @@ reads:
     url: http://williamjamespercussion.com/2015/03/22/12-thoughts-from-the-other-side-of-the-screen/
   - title: Practicing Summed Up in 6 Sentences by Doug Yeo
     url: http://www.andrewhitz.com/blog/2012/09/11/practicing-summed-up-in-6-sentences-by-doug-yeo
-  - title: 3 Practice Hacks Boost Learning
-    url: http://www.juilliard.edu/journal/1509/practicehacks
 links:
   - title: University of South Carolina School of Music
     url: http://www.sc.edu/study/colleges_schools/music/
@@ -35,8 +33,8 @@ links:
     url: https://www.musicalchairs.info/
   - title: Bullet Proof Musician
     url: http://www.bulletproofmusician.com/
-  - title: The Trombone Forum
-    url: http://tromboneforum.org/
+  - title: Trombone Chat
+    url: https://www.trombonechat.com/
   - title: Online Trombone Journal
     url: http://trombone.org/
   - title: Trombone Excerpts

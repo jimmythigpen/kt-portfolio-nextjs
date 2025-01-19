@@ -1,7 +1,10 @@
 {
   "name": "kt-portfolio-nextjs",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "version": "1.0.0",
-  "description": "",
+  "description": "Katie's portfolio website",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch assets/stylesheets/main.scss assets/stylesheets/main.css",
